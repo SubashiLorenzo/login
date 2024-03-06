@@ -1,13 +1,23 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import Stupido from "./components/Stupido";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Login from "./components/Login";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route index element={<App />} />
+        <Route path="/Login" element={<Login />} />
+        <Route path="/success" element={<Stupido />} />
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
