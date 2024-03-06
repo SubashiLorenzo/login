@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Router } from "react-router";
 import { useNavigate } from "react-router-dom";
+import Header from "./Header";
 export default function Login() {
   let [email, setEmail] = useState("");
   let [password, setPassword] = useState("");
@@ -54,6 +55,7 @@ export default function Login() {
 
   return (
     <>
+      <Header email={email} />
       <div className={"login " + loginClass}>
         <input
           className={mailErr}

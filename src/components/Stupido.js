@@ -1,14 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Route, Routes, useNavigate } from "react-router-dom";
+import Header from "./Header";
+import Homepage from "./Homepage";
 
 function Stupido() {
   const navigate = useNavigate();
-  if (localStorage.getItem("isLogged" === "false")) {
-    return navigate("/Login");
+  console.log("CANE");
+  if (!JSON.parse(localStorage.getItem("isLogged"))) {
+    navigate("/Login");
+    console.log("ciao");
   } else {
-    return <div>Stupido</div>;
   }
+  return <Homepage></Homepage>;
 }
 
 export default Stupido;

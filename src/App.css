@@ -3,6 +3,9 @@ body,
 #root,
 .App {
   height: 100%;
+  background-color: black;
+  color: white;
+  font-weight: 800;
 }
 .App {
   display: flex;
@@ -14,8 +17,42 @@ body,
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 2px solid black;
+  border: 2px solid whitesmoke;
   justify-content: center;
   width: 200px;
   height: 200px;
+}
+.header {
+  display: flex;
+  justify-content: flex-end;
+  border-bottom: 2px solid darkgray;
+}
+.info {
+  margin: 20px;
+  color: white;
+}
+
+.card {
+  height: 100px;
+  width: 100px;
+  border: 2px solid coral;
+}
+.pics {
+  height: 100px;
+}
+.product {
+  border: 1px solid black;
+  width: 200px;
+}
+.container {
+  display: flex;
+  margin-left: 50px;
+}
+.products {
+  display: flex;
+  flex-flow: wrap;
+  gap: 80px;
+}
+.titolo {
+  text-align: center;
 }

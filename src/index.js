@@ -6,14 +6,15 @@ import reportWebVitals from "./reportWebVitals";
 import Stupido from "./components/Stupido";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Login from "./components/Login";
+import Homepage from "./components/Homepage";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<App />} />
-        <Route index element={<App />} />
+        <Route path="/" element={<Homepage />} />
+        <Route index element={<Homepage />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/success" element={<Stupido />} />
       </Routes>
