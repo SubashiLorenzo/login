@@ -17,10 +17,15 @@ body,
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 2px solid whitesmoke;
+  border-image: linear-gradient(#ffda08, #897b0d, #c20000) 30;
+  border-width: 4px;
+  border-style: dotted;
   justify-content: center;
   width: 200px;
   height: 200px;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 10%;
 }
 .header {
   display: flex;
@@ -55,4 +60,66 @@ body,
 }
 .titolo {
   text-align: center;
+}
+
+.login-button {
+  padding-top: 1rem;
+  font-size: 25px;
+  letter-spacing: 1px;
+  margin: 0 auto;
+  background-color: transparent;
+  color: white;
+  font-weight: 900;
+  border: none;
+
+  position: relative;
+  text-align: center;
+}
+
+.login-button:hover {
+  color: blue;
+  animation-name: example;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-play-state: running;
+}
+@keyframes example {
+  0% {
+    color: blue;
+    font-size: 25px;
+  }
+  15% {
+    color: red;
+  }
+  25% {
+    color: blueviolet;
+    font-size: 25px;
+  }
+  50% {
+    color: cyan;
+    font-size: 25px;
+  }
+  75% {
+    color: chartreuse;
+  }
+  100% {
+    color: green;
+    font-size: 25px;
+  }
+}
+#login {
+  background: black;
+  padding: 8px;
+  border-radius: 0;
+  border: 1px solid white;
+  color: white;
+}
+#titolo {
+  text-align: left;
+}
+.product:hover {
+  background-color: white;
+  color: black;
+  opacity: 90%;
 }

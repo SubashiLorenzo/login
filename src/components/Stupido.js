@@ -7,10 +7,11 @@ import Homepage from "./Homepage";
 function Stupido() {
   const navigate = useNavigate();
   console.log("CANE");
-  if (!JSON.parse(localStorage.getItem("isLogged"))) {
-    navigate("/Login");
-    console.log("ciao");
+  if (JSON.parse(localStorage.getItem("isLogged") == "true")) {
+    navigate("/success");
+    console.log(JSON.parse(localStorage.getItem("isLogged")));
   } else {
+    navigate("/Login");
   }
   return <Homepage></Homepage>;
 }

@@ -42,11 +42,12 @@ export default function Login() {
       setLoading(false);
       if (res.status >= 400) {
         setLoginClass("error");
-        localStorage.setItem("isLogged", false);
+        localStorage.setItem("isLogged", "false");
+        navigate("/Login");
       } else {
         setLoginClass("success");
         navigate("/success");
-        localStorage.setItem("isLogged", true);
+        localStorage.setItem("isLogged", "true");
       }
       let json = await res.json();
       console.log(json);
@@ -56,8 +57,10 @@ export default function Login() {
   return (
     <>
       <Header email={email} />
+      <h1>Welcome to a simple Login screen.</h1>
       <div className={"login " + loginClass}>
         <input
+          id="login"
           className={mailErr}
           type="email"
           placeholder="email"
@@ -68,6 +71,7 @@ export default function Login() {
           }}
         ></input>
         <input
+          id="login"
           className={passwErr}
           type="password"
           placeholder="password"
